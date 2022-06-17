@@ -11,9 +11,16 @@ var mapArray = [];
 // Get zipcode or postal code
 var zipOrpostal = function(){
 
-    fetch("https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?fuel_type=all&location=New+York&limit=5&radius=500&api_key=SwEWgqT1Snyw7Pp3sxyGmCNlQ5okceAAFKUr5PTU")
+    var location = inputEl.value;
+    console.log(location);
+
+    //fetch data with location info
+    fetch("https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?fuel_type=all&location="+location+"&limit=5&radius=500&api_key=SwEWgqT1Snyw7Pp3sxyGmCNlQ5okceAAFKUr5PTU")
     .then(function(response){
-        response.json().then(function(data){
+
+        if (response.ok){
+
+            response.json().then(function(data){
             console.log(data);
 
             //populate the mapArray with locations
@@ -83,18 +90,30 @@ var zipOrpostal = function(){
                 //add card to station details div
                 displayStationEl.appendChild(stationCard);
             }
+  
+           })
 
-          
-         
-        })
-    })
+
+        } else {
+            alert('replace error message with modal');
+        }
+
+
+
+
+
+
+                 }) // end function response
+
+ 
 };
 
 // Click search button
 searchButtonEl.addEventListener("click", function(){
     mapArray = [];
     zipOrpostal();
-    searchButtonEl.innerHTML = "";
+    inputEl.value = "";
+ 
     
 });
  
