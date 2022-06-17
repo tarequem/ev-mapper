@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Enriqueta&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
     <title>CHARGE IT UP | Your Best Charger Locator</title>
 </head>
 <!-- classes and IDs can be edited if needed -->
 <!-- CONTENT WILL BE ELABORATED LATER ON THE PROJECT -->
+
 <body>
     <header class="page-title">
         <h1>CHARGE IT UP</h1>
@@ -22,16 +25,38 @@
         <!-- User input and map data -->
         <section class="charge-info" id="charge-info">
             <h2 class="content-title" id="content-title">Please enter your information below:</h2>
-            <div id="usr-select" class="usr-select">
+            <div id="usr-select" class="usr-select flex flex-col md:flex-row justify-center">
                 <input type="text" name="user-location" class="text-input" placeholder="Enter your postal/zip code" />
                 <button class="btn" id="search-station" type="submit">Find Charger</button>
             </div>
-            <div class="pwr-location" id="pwr-location">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184551.80858473608!2d-79.51814028658596!3d43.71840381055741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1655342054466!5m2!1sen!2sca"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <!--add the location list and the content is used to show what it looks like when javascript is ready and can be deleted-->
+            <div class="chargers-info flex flex-col md:flex-row justify-between">
+                <div class="location-list">
+                    <h2 class="content-title" id="location-title">Chargers Location List</h2>
+                    <div class="station-info">
+                        <p><strong>Name: </strong>New Dawn Energy Solutions</p>
+                        <p><strong>Address: </strong>7321 Victoria Park Ave #8, Markham, ON</p>
+                        <p><strong>Distance: </strong>2.1KM</p>
+                    </div>
+                    <div class="station-info">
+                        <p><strong>Name: </strong>New Dawn Energy Solutions</p>
+                        <p><strong>Address: </strong>7321 Victoria Park Ave #8, Markham, ON</p>
+                        <p><strong>Distance: </strong>2.1KM</p>
+                    </div>
+                    <div class="station-info">
+                        <p><strong>Name: </strong>New Dawn Energy Solutions</p>
+                        <p><strong>Address: </strong>7321 Victoria Park Ave #8, Markham, ON</p>
+                        <p><strong>Distance: </strong>2.1KM</p>
+                    </div>
+                </div>
+
+                <div class="pwr-location" id="pwr-location">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184551.80858473608!2d-79.51814028658596!3d43.71840381055741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1655342054466!5m2!1sen!2sca"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </section>
 
@@ -39,10 +64,18 @@
         <hr />
         <!-- Weather information container -->
         <section class="wth-info" id="wth-info">
-            <h2 class="content-title" id="content-title">Don't forget the weather!</h2>
+            <h2 class="content-title" id="weather-title">Don't forget the weather!</h2>
+            <!--add the weather details box and the content is used to show what it looks like when javascript is ready and can be deleted after-->
             <div class="weather" id="weather">
-                <h3>WEATHER WIDGET PLACEHOLDER</h3>
-                <img src="https://media.istockphoto.com/photos/weather-forecast-concept-picture-id531889697?b=1&k=20&m=531889697&s=170667a&w=0&h=imZl8VcPhgj-6jTFFkYGbVTFOTyQ-u93Z9WsyhMdqps=" alt="weather placeholder">
+                <h3>Today's Weather</h3>
+                <div id="weather-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1555/1555512.png" alt="weather-icon">
+                </div>
+                <p>Temperature: 14 °C</p>
+                <div class="weather-alert">
+                    <p><strong>Today's Weather Alert:</strong> Conditions are favourable for the development of severe thunderstorms that may be capable of producing strong wind gusts and large hail.</p>
+                    <p>Please Drive Safely!</p>
+                </div>
             </div>
         </section>
     </main>
