@@ -127,18 +127,20 @@ var zipOrpostal = function () {
 };
 
 var mapDisplay = function (data) {
+    // decide the map size based on the size of the container
     var mapHeight = pwrLocationEl.clientHeight;
     var mapWidth = pwrLocationEl.clientWidth;
     var pins = "";
-    var length = data.fuel_stations.length - 1;
-    for (var i = 0; i < length + 1; i++) {
+    var lastIndex = data.fuel_stations.length - 1;
+    for (var i = 0; i < lastIndex + 1; i++) {
         pins += "&pp=" + data.fuel_stations[i].latitude + "," + data.fuel_stations[i].longitude + ";;" + (i + 1);
     }
-
+    
+    // determine the map zoom level based on the furthest distance
     var zoomLevel = 0;
-    if (data.fuel_stations[length].distance_km < 5) {
+    if (data.fuel_stations[lastIndex].distance_km < 5) {
         zoomLevel = 15;
-    } else if (data.fuel_stations[length].distance_km > 10) {
+    } else if (data.fuel_stations[lastIndex].distance_km > 10) {
         zoomLevel = 10;
     } else {
         zoomLevel = 12;
@@ -177,4 +179,5 @@ if (parsedStation) {
     zipOrpostal();
 }
 
+// close the modal window
 closePopUpBtn.addEventListener("click", closePopUpWindow);
