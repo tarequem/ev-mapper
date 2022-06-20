@@ -76,7 +76,12 @@
 }
 
 .pwr-location iframe {
-  min-height: 450px;
+    min-height: 450px;
+    width: 100%;
+    height: 100%;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 #location-title {
@@ -143,6 +148,13 @@
   font-style: italic;
   margin: 15px 0;
   font-size: 18px;
+}
+
+.weather-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .weather-alert p strong {
