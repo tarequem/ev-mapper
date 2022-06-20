@@ -15,7 +15,15 @@ var mapArray = [];
 var zipOrpostal = function () {
 
     var location = inputEl.value;
+
+
+    //saving last city in local storage
+    localStorage.setItem('lastCity', JSON.stringify(location));
+     
+  
+
     console.log(location);
+
 
     //fetch data with location info
     fetch("https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?fuel_type=all&location=" + location + "&limit=5&radius=500&api_key=SwEWgqT1Snyw7Pp3sxyGmCNlQ5okceAAFKUr5PTU")
@@ -24,7 +32,11 @@ var zipOrpostal = function () {
             if (response.ok) {
 
                 response.json().then(function (data) {
+
+                  //  console.log(data);
+
                     console.log(data);
+
 
                     //populate the mapArray with locations
                     for (var i = 0; i < 5; i++) {
@@ -50,8 +62,13 @@ var zipOrpostal = function () {
                             accessHours: data['fuel_stations'][i]['access_days_time']
                         }
 
+
+                      //  console.log(station.ev_network, station.ev_connector_types, station.distance,
+                      //      station.address, station.zip, station.phone, station.access, station.accessHours);
+
                         console.log(station.ev_network, station.ev_connector_types, station.distance,
                             station.address, station.zip, station.phone, station.access, station.accessHours);
+
 
                         //create elements and add content
                         var stationCard = document.createElement('div');
@@ -119,6 +136,25 @@ var closePopUpWindow = function () {
 // Click search button
 searchButtonEl.addEventListener("click", function () {
     mapArray = [];
+
+    displayStationEl.innerHTML = "";
+    zipOrpostal();
+    inputEl.value = "";
+});
+
+//showing last search
+
+    var localStation = localStorage.getItem('lastCity');
+    var parsedStation = JSON.parse(localStation);
+    console.log(parsedStation);
+ 
+    if(parsedStation){
+        inputEl.value = parsedStation;
+        zipOrpostal();
+    }
+
+closePopUpBtn.addEventListener("click", closePopUpWindow);
+
     zipOrpostal();
     inputEl.value = "";
 
@@ -126,3 +162,4 @@ searchButtonEl.addEventListener("click", function () {
 });
 
 closePopUpBtn.addEventListener("click", closePopUpWindow);
+

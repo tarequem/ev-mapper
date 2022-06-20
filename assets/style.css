@@ -165,11 +165,11 @@ footer {
 	top:50%;
 	left:50%;
 	Transform: translate(-50%,-50%);
-    color: white;
-    font-family: 'IBM Plex Mono', monospace;
-    border: 5px solid white;
-    text-align: center;
-	display:none;
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  border: 5px solid white;
+  text-align: center;
+  display: none;
 }
 
 #close-btn {
