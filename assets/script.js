@@ -61,9 +61,10 @@ var zipOrpostal = function () {
                                 accessHours: data['fuel_stations'][i]['access_days_time']
                             }
 
+                            //fetch weather data
                             var apiUrl = "https:api.openweathermap.org/data/2.5/weather?&units=metric&lat=" + mapCoordinates.lat + "&lon=" + mapCoordinates.lon + "&appid=220ff34db8df0fb665355972020ec55c";
   
-
+                            //variables for weather
                             var tempEl = document.querySelector("#temp");
                             var descEl = document.querySelector("#description");
                             var iconEl = document.querySelector("#icon");
@@ -76,8 +77,10 @@ var zipOrpostal = function () {
                                 var descData = data['weather'][0]['description'];
                                 var icon = data['weather'][0]['icon']
 
+                                //fetch weather icon
                                 var iconUrl = "<img class='weather-icon'  src= 'https://openweathermap.org/img/wn/" + icon + "@2x.png' />"
 
+                                //fill elements with fetched weather data
                                 iconEl.innerHTML = iconUrl;
                                 tempEl.innerHTML = tempData;
                                 descEl.innerHTML = descData;
