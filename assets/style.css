@@ -77,6 +77,11 @@
 
 .pwr-location iframe {
     min-height: 450px;
+    width: 100%;
+    height: 100%;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 #location-title {
@@ -145,6 +150,13 @@
     font-size: 18px;
 }
 
+.weather-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
 .weather-alert p strong {
     font-style: normal;
     font-size: 20px;
@@ -155,4 +167,29 @@ footer {
     color: white;
     font-family: 'IBM Plex Mono', monospace;
     text-align: center;
+}
+
+#pop-up {
+	Background: black;
+	Box-sizing: border-box; 
+	Padding: 10px;
+	Position:absolute;
+	top:50%;
+	left:50%;
+	Transform: translate(-50%,-50%);
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  border: 5px solid white;
+  text-align: center;
+  display: none;
+}
+
+#close-btn {
+    background-color: var(--teritary);
+    color: black;
+}
+
+#close-btn:hover {
+    background-color: var(--secondary);
+    color: white;
 }
