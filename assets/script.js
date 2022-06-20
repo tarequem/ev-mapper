@@ -61,6 +61,30 @@ var zipOrpostal = function () {
                                 accessHours: data['fuel_stations'][i]['access_days_time']
                             }
 
+                            var apiUrl = "https:api.openweathermap.org/data/2.5/weather?&units=metric&lat=" + mapCoordinates.lat + "&lon=" + mapCoordinates.lon + "&appid=220ff34db8df0fb665355972020ec55c";
+  
+
+                            var tempEl = document.querySelector("#temp");
+                            var descEl = document.querySelector("#description");
+                            var iconEl = document.querySelector("#icon");
+
+
+                            fetch(apiUrl)
+                            .then(response => response.json())
+                            .then(data => {
+                                var tempData = data['main']['temp'];
+                                var descData = data['weather'][0]['description'];
+                                var icon = data['weather'][0]['icon']
+
+                                var iconUrl = "<img class='weather-icon'  src= 'https://openweathermap.org/img/wn/" + icon + "@2x.png' />"
+
+                                iconEl.innerHTML = iconUrl;
+                                tempEl.innerHTML = tempData;
+                                descEl.innerHTML = descData;
+                                console.log(data);
+                            })
+                            
+
                             //  console.log(station.ev_network, station.ev_connector_types, station.distance,
                             //      station.address, station.zip, station.phone, station.access, station.accessHours);
 
@@ -151,11 +175,6 @@ var mapDisplay = function (data) {
     var apiUrl = "https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/" + data.latitude + "," + data.longitude + "/" + zoomLevel + "?mapSize=" + mapWidth + "," + mapHeight + pins + "&key=" + bingApiKey;
 
     mapEl.setAttribute("src", apiUrl);
-}
-
-//weather data
-var weather = function() {
-    
 }
 
 // function to close the modal

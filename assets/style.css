@@ -145,6 +145,13 @@
     font-size: 18px;
 }
 
+.weather-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
 .weather-alert p strong {
     font-style: normal;
     font-size: 20px;
@@ -180,9 +187,4 @@ footer {
 #close-btn:hover {
     background-color: var(--secondary);
     color: white;
-}
-
-.map {
-    width: 500px;
-    height: 500px;
 }
