@@ -68,13 +68,10 @@
             <!--add the weather details box and the content is used to show what it looks like when javascript is ready and can be deleted after-->
             <div class="weather" id="weather">
                 <h3>Today's Weather</h3>
-                <div id="weather-icon">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1555/1555512.png" alt="weather-icon">
-                </div>
-                <p>Temperature: 14 °C</p>
+                <div id="icon"></div>
+                <p>Temperature: <span id="temp"></span> °C</p>
                 <div class="weather-alert">
-                    <p><strong>Today's Weather Alert:</strong> Conditions are favourable for the development of severe
-                        thunderstorms that may be capable of producing strong wind gusts and large hail.</p>
+                    <p><strong>Today's Weather Alert:</strong> Today the forecast will be a <span id="description"></span>.</p>
                     <p>Please Drive Safely!</p>
                 </div>
             </div>
