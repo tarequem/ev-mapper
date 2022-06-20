@@ -1,78 +1,78 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --primary: #264653;
-    --secondary: #2A9D8F;
-    --teritary: #E9C46A;
+  --primary: #264653;
+  --secondary: #2a9d8f;
+  --teritary: #e9c46a;
 }
 
 .page-title {
-    background-color: var(--primary);
-    text-align: center;
+  background-color: var(--primary);
+  text-align: center;
 }
 
 .page-title h1 {
-    color: white;
-    font-size: 35px;
-    padding: 15px 0;
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: bold;
+  color: white;
+  font-size: 35px;
+  padding: 15px 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
 }
 
 .charge-info {
-    background-color: var(--secondary);
-    text-align: center;
-    padding-bottom: 20px;
+  background-color: var(--secondary);
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .content-title {
-    color: white;
-    font-size: 25px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: bold;
+  color: white;
+  font-size: 25px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
 }
 
 .usr-select {
-    margin: 20px 0 40px;
+  margin: 20px 0 40px;
 }
 
 .text-input {
-    min-width: 350px;
-    text-align: center;
-    font-family: 'Enriqueta', serif;
-    height: 55px;
-    margin: 0 10px;
+  min-width: 350px;
+  text-align: center;
+  font-family: "Enriqueta", serif;
+  height: 55px;
+  margin: 0 10px;
 }
 
 #search-station {
-    background-color: var(--teritary);
-    padding: 15px;
-    font-family: 'Enriqueta', serif;
-    font-weight: bold;
-    border-radius: 10px;
-    margin: 0 10px;
+  background-color: var(--teritary);
+  padding: 15px;
+  font-family: "Enriqueta", serif;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 0 10px;
 }
 
 #search-station:hover {
-    background-color: var(--primary);
-    color: white;
+  background-color: var(--primary);
+  color: white;
 }
 
 .chargers-info {
-    background-color: var(--teritary);
-    margin: 25px;
+  background-color: var(--teritary);
+  margin: 25px;
 }
 
 .location-list {
-    padding: 20px;
+  padding: 20px;
 }
 
 .pwr-location {
-    flex-basis: 65%;
+  flex-basis: 65%;
 }
 
 .pwr-location iframe {
@@ -85,69 +85,69 @@
 }
 
 #location-title {
-    color: black;
+  color: black;
 }
 
 .station-info {
-    background-color: var(--primary);
-    margin: 20px 10px;
-    color: white;
-    font-family: 'Enriqueta', serif;
-    text-align: left;
+  background-color: var(--primary);
+  margin: 20px 10px;
+  color: white;
+  font-family: "Enriqueta", serif;
+  text-align: left;
 }
 
 .station-info p {
-    margin: 15px 0;
-    padding: 5px 10px;
+  margin: 15px 0;
+  padding: 5px 10px;
 }
 
 .wth-info {
-    background-color: var(--teritary);
-    text-align: center;
-    padding-bottom: 50px;
+  background-color: var(--teritary);
+  text-align: center;
+  padding-bottom: 50px;
 }
 
 #weather-title {
-    color: black;
-    padding-top: 20px;
-    margin-bottom: 25px;
+  color: black;
+  padding-top: 20px;
+  margin-bottom: 25px;
 }
 
 .weather {
-    background-color: var(--secondary);
-    margin: 0 20%;
-    padding-bottom: 20px;
+  background-color: var(--secondary);
+  margin: 0 20%;
+  padding-bottom: 20px;
 }
 
 .weather h3 {
-    font-family: 'Enriqueta', serif;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: bold;
+  font-family: "Enriqueta", serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
 }
 
 #weather-icon {
-    width: 200px;
-    height: 200px;
-    margin: auto;
+  width: 200px;
+  height: 200px;
+  margin: auto;
 }
 
 .weather p {
-    font-family: 'Enriqueta', serif;
-    font-size: 20px;
+  font-family: "Enriqueta", serif;
+  font-size: 20px;
 }
 
 .weather-alert {
-    width: 60%;
-    margin: 20px auto;
-    background-color: var(--primary);
-    color: white;
+  width: 60%;
+  margin: 20px auto;
+  background-color: var(--primary);
+  color: white;
 }
 
 .weather-alert p {
-    font-style: italic;
-    margin: 15px 0;
-    font-size: 18px;
+  font-style: italic;
+  margin: 15px 0;
+  font-size: 18px;
 }
 
 .weather-icon {
@@ -158,38 +158,107 @@
 }
 
 .weather-alert p strong {
-    font-style: normal;
-    font-size: 20px;
+  font-style: normal;
+  font-size: 20px;
+}
+
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
 }
 
 footer {
-    background-color: var(--primary);
-    color: white;
-    font-family: 'IBM Plex Mono', monospace;
-    text-align: center;
+  background-color: var(--primary);
+  color: white;
+  font-family: "IBM Plex Mono", monospace;
+  text-align: center;
 }
 
 #pop-up {
-	Background: black;
-	Box-sizing: border-box; 
-	Padding: 10px;
-	Position:absolute;
-	top:50%;
-	left:50%;
-	Transform: translate(-50%,-50%);
+  background: black;
+  box-sizing: border-box;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   border: 5px solid white;
   text-align: center;
   display: none;
 }
 
 #close-btn {
-    background-color: var(--teritary);
-    color: black;
+  background-color: var(--teritary);
+  color: black;
 }
 
 #close-btn:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
+#logo {
+  height: auto;
+  max-width: 70px;
+  margin-top: 1%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+}
+
+#companyName {
+  height: 4%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+nav {
+  margin-top: auto;
+  margin-bottom: auto;
+  color: white;
+  font-size: 25px;
+  padding: 15px 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  position: absolute;
+  right: 2%;
+ 
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul a {
+  margin: 0 30px;
+  font-weight: lighter;
+}
+
+#howTo {
+    background-color: var(--teritary);
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#howTo h2 {
+    color: black;
+    font-size: 25px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+}
+
+#how-to-list {
     background-color: var(--secondary);
-    color: white;
+    margin: 0 20%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: auto;
+    padding-right: auto;
 }
