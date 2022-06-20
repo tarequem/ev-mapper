@@ -151,6 +151,10 @@ var mapDisplay = function (data) {
     mapEl.setAttribute("src", apiUrl);
 }
 
+//weather data
+var weather = function() {
+    
+}
 
 // function to close the modal
 var closePopUpWindow = function () {

@@ -181,3 +181,8 @@ footer {
     background-color: var(--secondary);
     color: white;
 }
+
+.map {
+    width: 500px;
+    height: 500px;
+}
