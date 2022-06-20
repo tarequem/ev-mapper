@@ -77,6 +77,11 @@
 
 .pwr-location iframe {
     min-height: 450px;
+    width: 100%;
+    height: 100%;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 #location-title {
