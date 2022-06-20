@@ -158,18 +158,18 @@ footer {
 }
 
 #pop-up {
-    Background: black;
-    Box-sizing: border-box;
-    Padding: 10px;
-    Position: absolute;
-    top: 50%;
-    left: 50%;
-    Transform: translate(-50%, -50%);
-    color: white;
-    font-family: 'IBM Plex Mono', monospace;
-    border: 5px solid white;
-    text-align: center;
-    display: none;
+	Background: black;
+	Box-sizing: border-box; 
+	Padding: 10px;
+	Position:absolute;
+	top:50%;
+	left:50%;
+	Transform: translate(-50%,-50%);
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  border: 5px solid white;
+  text-align: center;
+  display: none;
 }
 
 #close-btn {
