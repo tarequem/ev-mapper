@@ -217,7 +217,7 @@ footer {
   margin-bottom: auto;
 }
 
-nav {
+/* nav {
   margin-top: auto;
   margin-bottom: auto;
   color: white;
@@ -225,8 +225,8 @@ nav {
   padding: 15px 0;
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
-  position: flex;
-  margin-left: auto;
+  /* position: flex;
+  margin-left: auto; */
   margin-right: 2%;
  
 }
@@ -237,7 +237,7 @@ header nav ul {
   flex-wrap: wrap;
   align-items: center;
   list-style: none;
-}
+} */
 
 header nav ul a {
   margin: 0 30px;
