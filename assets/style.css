@@ -265,3 +265,7 @@ header nav ul a {
     padding-left: auto;
     padding-right: auto;
 }
+
+.hide {
+    display: none;
+}
