@@ -10,6 +10,7 @@ var closePopUpBtn = document.querySelector("#close-btn");
 var pwrLocationEl = document.querySelector(".pwr-location");
 var mapEl = document.querySelector(".map");
 var weatherEl = document.querySelector(".weather");
+var listEl = document.querySelector("#charger-list");
 
 //An array of lat and long coordinates to be used by the map api
 var mapArray = [];
@@ -27,6 +28,8 @@ var zipOrpostal = function () {
         alertMessageEl.textContent = "Please enter a valid postal code in US or Canada";
         popUpEl.style.display = "block"
     } else {
+        pwrLocationEl.classList.remove("hide")
+        listEl.classList.remove("hide")
         weatherEl.classList.remove("hide")
         //fetch data with location info
         fetch("https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?fuel_type=all&location=" + location + "&limit=3&radius=infinite&api_key=SwEWgqT1Snyw7Pp3sxyGmCNlQ5okceAAFKUr5PTU")
