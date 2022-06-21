@@ -101,6 +101,7 @@
 .station-info p {
   margin: 15px 0;
   padding: 5px 10px;
+  white-space: pre;
 }
 
 .wth-info {
