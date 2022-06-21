@@ -1,9 +1,16 @@
-# ev-mapper
-Description: Charge it up is an application that helps electric vehicle owners find charging stations close to a postal code or zip code across North America
+# EV-Mapper: Charge It Up
 
-Technologies used: HTML, CSS, Tailwind, JavaScript
+## Description: 
+Charge it up is an application that helps electric vehicle owners find charging stations close to a postal code or zip code across North America
 
-![image](https://user-images.githubusercontent.com/35638932/174694335-5c45ad06-87d2-4f4f-ab2b-5b94b25a2026.png)
+## Technologies used: 
+HTML, CSS, Tailwind, JavaScript
 
-#Link to live program
+## API used:
+NREL API; openweather API; Bingmap API
+
+## Screenshot:
+<img src=".\assets\screenshot.png" alt="webpage screenshot" width ="876" height="1710"/>
+
+## Link to live program:
 * https://tarequem.github.io/ev-mapper/
