@@ -9,6 +9,7 @@ var alertMessageEl = document.querySelector("#alert-message");
 var closePopUpBtn = document.querySelector("#close-btn");
 var pwrLocationEl = document.querySelector(".pwr-location");
 var mapEl = document.querySelector(".map");
+var weatherInfoEl = document.querySelector(".wth-info");
 var weatherEl = document.querySelector(".weather");
 var listEl = document.querySelector("#charger-list");
 
@@ -30,7 +31,7 @@ var zipOrpostal = function () {
     } else {
         pwrLocationEl.classList.remove("hide")
         listEl.classList.remove("hide")
-        weatherEl.classList.remove("hide")
+        weatherInfoEl.classList.remove("hide")
         //fetch data with location info
         fetch("https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?fuel_type=all&location=" + location + "&limit=3&radius=infinite&api_key=SwEWgqT1Snyw7Pp3sxyGmCNlQ5okceAAFKUr5PTU")
             .then(function (response) {
