@@ -105,7 +105,7 @@ var zipOrpostal = function () {
                             stationDetailConnectorType.innerHTML = `EV Connector Type: ${station.ev_connector_types}`;
 
                             var stationDetailDistance = document.createElement('p');
-                            stationDetailDistance.innerHTML = `Station is ${station.distance}km away`;
+                            stationDetailDistance.innerHTML = `Station is ${Math.round(station.distance)} KM away`;
 
                             var stationDetailAddress = document.createElement('p');
                             stationDetailAddress.innerHTML = `Station address: ${station.address}`;
