@@ -245,7 +245,7 @@ header nav ul a {
 }
 
 #howTo {
-    background-color: var(--teritary);
+    background-color: var(--secondary);
     text-align: center;
     padding-bottom: 50px;
 }
@@ -258,7 +258,7 @@ header nav ul a {
 }
 
 #how-to-list {
-    background-color: var(--secondary);
+    background-color: var(--teritary);
     margin: 0 20%;
     padding-bottom: 20px;
     padding-top: 20px;
