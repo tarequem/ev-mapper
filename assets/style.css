@@ -223,8 +223,9 @@ nav {
   padding: 15px 0;
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
-  position: absolute;
-  right: 2%;
+  position: flex;
+  margin-left: auto;
+  margin-right: 2%;
  
 }
 
