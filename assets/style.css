@@ -94,6 +94,8 @@
   color: white;
   font-family: "Enriqueta", serif;
   text-align: left;
+  line-height: 5px;
+  padding: 10px;
 }
 
 .station-info p {
