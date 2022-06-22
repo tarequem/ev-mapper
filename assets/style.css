@@ -1,308 +1,323 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-  --primary: #264653;
-  --secondary: #2a9d8f;
-  --teritary: #e9c46a;
+    --primary: #264653;
+    --secondary: #2a9d8f;
+    --teritary: #e9c46a;
 }
 
 .page-title {
-  background-color: var(--primary);
-  text-align: center;
+    background-color: var(--primary);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .page-title h1 {
-  color: white;
-  font-size: 35px;
-  padding: 15px 0;
-  font-family: "IBM git  Mono", monospace;
-  font-weight: bold;
+    color: white;
+    font-size: 35px;
+    padding: 15px 0;
+    font-family: "IBM git  Mono", monospace;
+    font-weight: bold;
 }
 
 .charge-info {
-  background-color: var(--secondary);
-  text-align: center;
-  padding-bottom: 20px;
+    background-color: var(--secondary);
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .content-title {
-  color: white;
-  font-size: 25px;
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: bold;
+    color: white;
+    font-size: 25px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+    padding-top: 30px;
+    margin-bottom: 40px;
 }
 
 .usr-select {
-  margin: 20px 0 40px;
+    margin: 20px 0 40px;
 }
 
 .text-input {
-  min-width: 350px;
-  text-align: center;
-  font-family: "Enriqueta", serif;
-  height: 55px;
-  margin: 0 10px;
+    min-width: 350px;
+    text-align: center;
+    font-family: "Enriqueta", serif;
+    height: 55px;
+    margin: 0 10px;
+    border: 1px solid var(--primary);
 }
 
 #search-station {
-  background-color: var(--teritary);
-  padding: 15px;
-  font-family: "Enriqueta", serif;
-  font-weight: bold;
-  border-radius: 10px;
-  margin: 0 10px;
+    background-color: var(--teritary);
+    padding: 15px;
+    font-family: "Enriqueta", serif;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 0 10px;
 }
 
 #search-station:hover {
-  background-color: var(--primary);
-  color: white;
+    background-color: var(--primary);
+    color: white;
 }
 
 .chargers-info {
-  background-color: var(--teritary);
-  margin: 25px;
+    background-color: var(--teritary);
+    margin: 25px;
 }
 
 .location-list {
-  padding: 20px;
+    padding: 20px;
 }
 
 .pwr-location {
-  flex-basis: 65%;
+    flex-basis: 65%;
 }
 
 .pwr-location iframe {
-  min-height: 450px;
-  width: 100%;
-  height: 100%;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 40px;
+    min-height: 450px;
+    width: 100%;
+    height: 100%;
+    padding-right: 26px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 #location-title {
-  color: black;
+    color: black;
 }
 
 .station-info {
-  background-color: var(--primary);
-  margin: 20px 10px;
-  color: white;
-  font-family: "Enriqueta", serif;
-  text-align: left;
-  line-height: 5px;
-  padding: 10px;
+    background-color: var(--primary);
+    margin: 20px 10px;
+    color: white;
+    font-family: "Enriqueta", serif;
+    text-align: left;
+    line-height: 5px;
+    padding: 10px;
 }
 
 .station-info p {
-  margin: 15px 0;
-  padding: 5px 10px;
-  white-space: pre;
+    margin: 15px 0;
+    padding: 5px 10px;
+    white-space: pre;
 }
 
 .wth-info {
-  background-color: var(--teritary);
-  text-align: center;
-  padding-bottom: 50px;
+    background-color: var(--teritary);
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 #weather-title {
-  color: black;
-  padding-top: 20px;
-  margin-bottom: 25px;
+    color: black;
+    padding-top: 30px;
+    margin-bottom: 25px;
 }
 
 .weather {
-  background-color: var(--secondary);
-  margin: 0 20%;
-  padding-bottom: 20px;
+    background-color: var(--secondary);
+    margin: 0 20%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border: 2px solid var(--primary);
 }
 
 .weather h3 {
-  font-family: "Enriqueta", serif;
-  font-size: 20px;
-  font-style: italic;
-  font-weight: bold;
+    font-family: "Enriqueta", serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
 }
 
 #weather-icon {
-  width: 200px;
-  height: 200px;
-  margin: auto;
+    width: 200px;
+    height: 200px;
+    margin: auto;
 }
 
 .weather p {
-  font-family: "Enriqueta", serif;
-  font-size: 20px;
+    font-family: "Enriqueta", serif;
+    font-size: 20px;
 }
 
 .weather-alert {
-  width: 60%;
-  margin: 20px auto;
-  background-color: var(--primary);
-  color: white;
+    width: 60%;
+    margin: 20px auto;
+    background-color: var(--primary);
+    color: white;
+    padding: 2%
 }
 
 .weather-alert p {
-  font-style: italic;
-  margin: 15px 0;
-  font-size: 18px;
+    font-style: italic;
+    margin: 15px 0;
+    font-size: 18px;
 }
 
 .weather-icon {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .weather-alert p strong {
-  font-style: normal;
-  font-size: 20px;
+    font-style: normal;
+    font-size: 20px;
 }
 
 header {
-  position: sticky;
+    position: sticky;
 }
 
 footer {
-  background-color: var(--primary);
-  color: white;
-  font-family: "IBM Plex Mono", monospace;
-  text-align: center;
+    background-color: var(--primary);
+    color: white;
+    font-family: "IBM Plex Mono", monospace;
+    text-align: center;
 }
 
 #pop-up {
-  background: black;
-  box-sizing: border-box;
-  padding: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-family: "IBM Plex Mono", monospace;
-  border: 5px solid white;
-  text-align: center;
-  display: none;
+    background: black;
+    box-sizing: border-box;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "IBM Plex Mono", monospace;
+    border: 5px solid white;
+    text-align: center;
+    display: none;
 }
 
 #close-btn {
-  background-color: var(--teritary);
-  color: black;
+    background-color: var(--teritary);
+    color: black;
 }
 
 #close-btn:hover {
-  background-color: var(--secondary);
-  color: white;
+    background-color: var(--secondary);
+    color: white;
 }
 
 #logo {
-  width: 70px;
+    width: 70px;
 }
 
 #companyName {
-  height: 4%;
-  margin-top: auto;
-  margin-bottom: auto;
+    height: 4%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 nav {
-  margin-top: auto;
-  margin-bottom: auto;
-  color: white;
-  font-size: 25px;
-  padding: 15px 0;
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: bold;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    font-size: 25px;
+    padding: 15px 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
 }
 
 header nav ul {
-  list-style: none;
+    list-style: none;
 }
 
 header nav ul li:hover {
-  background-color: var(--secondary);
-  border-radius: 15px;
+    background-color: var(--secondary);
+    border-radius: 15px;
 }
 
 header nav ul a {
-  margin: 0 30px;
-  font-weight: lighter;
-  white-space: nowrap;
+    margin: 0 30px;
+    font-weight: lighter;
+    white-space: nowrap;
 }
 
 
 #howTo {
-  background-color: var(--teritary);
-  text-align: center;
-  padding-bottom: 50px;
+    background-color: var(--teritary);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
 }
 
 #howTo h2 {
-  color: black;
-  font-size: 25px;
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: bold;
+    color: black;
+    font-size: 25px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
 }
 
 #how-to-list {
-  background-color: var(--secondary);
-  margin: 0 20%;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  padding-left: auto;
-  padding-right: auto;
+    background-color: var(--secondary);
+    margin: 0 20%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: auto;
+    padding-right: auto;
+    border: 2px solid var(--primary);
 }
 
 .about-us-hero {
-  background-image: url("top view cropped2.png");
-  background-size: cover;
+    background-image: url("top view cropped2.png");
+    background-size: cover;
 
-  background-position: center;
+    background-position: center;
 
-  display: flex;
+    display: flex;
 
-  justify-content: center;
+    justify-content: center;
 
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 
-  width: 100%;
-  height: 100vh;
+    width: 100%;
+    height: 100vh;
 }
 
 .team-members {
-  display: grid;
-  text-align: center;
-  grid-template-columns: 29% 29% 29%;
-  gap: 2em;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 29% 29% 29%;
+    gap: 2em;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .team-members a {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .team-members div {
-  background: rgb(180,180,180,0.7);
-  border: black solid 4px;
+    background: rgb(180, 180, 180, 0.7);
+    border: black solid 4px;
 }
 
 .team-members img {
-  width: 20%;
-  height: auto;
-  margin: 4% 0;
+    width: 20%;
+    height: auto;
+    margin: 4% 0;
 }
 
 .team-members h2 {
-  color: black;
-  font-size: 50px;
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: bold;
-  margin: 4% 0;
+    color: black;
+    font-size: 50px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+    margin: 4% 0;
 }
 
 .hide {
