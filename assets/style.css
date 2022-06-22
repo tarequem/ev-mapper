@@ -165,9 +165,7 @@
 }
 
 header {
-  display: flex;
   position: sticky;
-  top: 0;
 }
 
 footer {
@@ -203,12 +201,7 @@ footer {
 }
 
 #logo {
-  height: auto;
-  max-width: 70px;
-  margin-top: 1%;
-  margin-right: 1%;
-  margin-bottom: 1%;
-  margin-left: 2%;
+  width: 70px;
 }
 
 #companyName {
@@ -225,23 +218,23 @@ nav {
   padding: 15px 0;
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
-  position: flex;
-  margin-left: auto;
-  margin-right: 2%;
 }
 
 header nav ul {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
   list-style: none;
+}
+
+header nav ul li:hover {
+  background-color: var(--secondary);
+  border-radius: 15px;
 }
 
 header nav ul a {
   margin: 0 30px;
   font-weight: lighter;
+  white-space: nowrap;
 }
+
 
 #howTo {
   background-color: var(--teritary);
