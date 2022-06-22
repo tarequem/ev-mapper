@@ -279,6 +279,9 @@ header nav ul a {
   text-align: center;
   grid-template-columns: 29% 29% 29%;
   gap: 2em;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .team-members a {
