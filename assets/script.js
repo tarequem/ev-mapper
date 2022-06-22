@@ -21,7 +21,8 @@ var zipOrpostal = function () {
     // to check if the input is valid postal code format
     var location = inputEl.value.trim().replace(/\s+/g, '').toLowerCase();
     var regEx = /^(\d{5}(-\d{4})?|[a-z]\d[a-z]\d[a-z]\d)$/;
-    console.log(location);
+    // console.log(location);
+
     //saving last city in local storage
     localStorage.setItem('lastCity', JSON.stringify(location));
 
@@ -67,7 +68,7 @@ var zipOrpostal = function () {
 
                             //fetch weather data
                             var apiUrl = "https:api.openweathermap.org/data/2.5/weather?&units=metric&lat=" + mapCoordinates.lat + "&lon=" + mapCoordinates.lon + "&appid=220ff34db8df0fb665355972020ec55c";
-  
+
                             //variables for weather
                             var tempEl = document.querySelector("#temp");
                             var descEl = document.querySelector("#description");
@@ -75,22 +76,22 @@ var zipOrpostal = function () {
 
 
                             fetch(apiUrl)
-                            .then(response => response.json())
-                            .then(data => {
-                                var tempData = data['main']['temp'];
-                                var descData = data['weather'][0]['description'];
-                                var icon = data['weather'][0]['icon']
+                                .then(response => response.json())
+                                .then(data => {
+                                    var tempData = data['main']['temp'];
+                                    var descData = data['weather'][0]['description'];
+                                    var icon = data['weather'][0]['icon']
 
-                                //fetch weather icon
-                                var iconUrl = "<img class='weather-icon'  src= 'https://openweathermap.org/img/wn/" + icon + "@2x.png' />"
+                                    //fetch weather icon
+                                    var iconUrl = "<img class='weather-icon'  src= 'https://openweathermap.org/img/wn/" + icon + "@2x.png' />"
 
-                                //fill elements with fetched weather data
-                                iconEl.innerHTML = iconUrl;
-                                tempEl.innerHTML = tempData;
-                                descEl.innerHTML = descData;
-                                console.log(data);
-                            })
-                            
+                                    //fill elements with fetched weather data
+                                    iconEl.innerHTML = iconUrl;
+                                    tempEl.innerHTML = tempData;
+                                    descEl.innerHTML = descData;
+                                    // console.log(data);
+                                })
+
 
                             //  console.log(station.ev_network, station.ev_connector_types, station.distance,
                             //      station.address, station.zip, station.phone, station.access, station.accessHours);
@@ -100,7 +101,7 @@ var zipOrpostal = function () {
                             stationCard.classList.add("station-info");
 
                             var stationNumber = document.createElement("p");
-                            stationNumber.innerHTML = "Station " + (i+1);
+                            stationNumber.innerHTML = "Station " + (i + 1);
 
                             var stationDetailNetwork = document.createElement('p');
                             stationDetailNetwork.innerHTML = `EV Network: ${station.ev_network}`;
@@ -166,7 +167,7 @@ var mapDisplay = function (data) {
     for (var i = 0; i < lastIndex + 1; i++) {
         pins += "&pp=" + data.fuel_stations[i].latitude + "," + data.fuel_stations[i].longitude + ";;" + (i + 1);
     }
-    
+
     // determine the map zoom level based on the furthest distance
     var zoomLevel = 0;
     if (data.fuel_stations[lastIndex].distance_km < 5) {
@@ -202,7 +203,7 @@ usrFormEl.addEventListener("submit", function () {
 
 var localStation = localStorage.getItem('lastCity');
 var parsedStation = JSON.parse(localStation);
-console.log(parsedStation);
+// console.log(parsedStation);
 
 if (parsedStation) {
     inputEl.value = parsedStation;
