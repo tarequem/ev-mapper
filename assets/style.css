@@ -294,11 +294,8 @@ header nav ul a {
 
 .team-members div {
   background: rgb(180,180,180,0.7);
+  border: black solid 4px;
 }
-
-/* .team-members div {
-  opacity: .5;
-} */
 
 .team-members img {
   width: 20%;
@@ -312,11 +309,4 @@ header nav ul a {
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
   margin: 4% 0;
-}
-
-#Rafael {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
 }
