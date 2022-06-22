@@ -54,7 +54,7 @@
                 <button class="btn" id="search-station" type="submit">Find Charger</button>
             </form>
             <!--add the location list and the content is used to show what it looks like when javascript is ready and can be deleted-->
-            <div class="chargers-info flex flex-col md:flex-row justify-between">
+            <div id="charger-list" class="chargers-info hide flex flex-col md:flex-row justify-between">
                 <div class="location-list">
                     <h2 class="content-title" id="location-title">Chargers Location List</h2>
                     <!-- <div class="station-info">
@@ -74,7 +74,7 @@
                     </div> -->
                 </div>
 
-                <div class="pwr-location" id="pwr-location">
+                <div class="pwr-location hide" id="pwr-location">
                     <iframe class="map" width="100%" height="100%" frameborder="0"
                         src="https://www.bing.com/maps/embed?h=400&w=500&cp=43.670354999132734~-79.5574951171875&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
                         scrolling="no">
@@ -86,7 +86,7 @@
         <!-- THIS LINE CAN BE REMOVED IF NEEDED -->
         <hr />
         <!-- Weather information container -->
-        <section class="wth-info" id="wth-info">
+        <section class="wth-info hide" id="wth-info">
             <h2 class="content-title" id="weather-title">Don't forget the weather!</h2>
             <!--add the weather details box and the content is used to show what it looks like when javascript is ready and can be deleted after-->
             <div class="weather" id="weather">
@@ -100,6 +100,7 @@
             </div>
         </section>
 
+        <hr />
         <section id="howTo">
             <h2>How It Works</h2>
             <br/>
