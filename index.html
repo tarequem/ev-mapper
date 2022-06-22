@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Enriqueta&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>CHARGE IT UP | Your Best Charger Locator</title>
+</head>
+
+<body>
+    <header class="page-title flex flex-col md:flex-row md:justify-between">
+
+        <div id="companyName" class="flex flex-row justify-center">
+            <div id="logo">
+                <img src="assets/Charge station.svg" alt="logo of charging station">
+            </div>
+            <h1><a href="index.html">CHARGE IT UP</a></h1>
+        </div>
+
+        <nav>
+            <ul class="flex flex-row justify-between">
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="#howTo">How It Works</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hero>
+        <img src="assets/electric cars parking lot.png"
+            alt="image of parking lot with charging stations for electric cars">
+    </hero>
+
+    <main class="page-content" id="page-content">
+        <!-- User input and map data -->
+        <section class="charge-info" id="charge-info">
+            <h2 class="content-title" id="content-title">Please enter your zip/postal code in US/Canada below:</h2>
+            <form id="usr-select" class="usr-select flex flex-col md:flex-row justify-center">
+                <input required type="text" name="user-location" class="text-input"
+                    placeholder="Enter postal/zip code" />
+                <button class="btn" id="search-station" type="submit">Find Charger</button>
+            </form>
+            <!--add the location list and the content is used to show what it looks like when javascript is ready and can be deleted-->
+            <div id="charger-list" class="chargers-info hide flex flex-col md:flex-row justify-between">
+                <div class="location-list">
+                    <h2 class="content-title" id="location-title">Chargers Location List</h2>
+                </div>
+
+                <div class="pwr-location hide" id="pwr-location">
+                    <iframe class="map" width="100%" height="100%" frameborder="0"
+                        src="https://www.bing.com/maps/embed?h=400&w=500&cp=43.670354999132734~-79.5574951171875&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
+                        scrolling="no">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather information container -->
+        <section class="wth-info hide" id="wth-info">
+            <h2 class="content-title" id="weather-title">Don't forget the weather!</h2>
+            <!--add the weather details box and the content is used to show what it looks like when javascript is ready and can be deleted after-->
+            <div class="weather" id="weather">
+                <h3>Today's Weather</h3>
+                <div id="icon"></div>
+                <p>Temperature: <span id="temp"></span> °C</p>
+                <div class="weather-alert">
+                    <p><strong>Today's Weather Alert:</strong> Today the forecast will be a <span
+                            id="description"></span>.</p>
+                    <p>Please Drive Safely!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="howTo">
+            <h2>How It Works</h2>
+            <br />
+            <div id="how-to-list">
+                <ul>
+                    <li>Enter your destination zip code in the search bar</li>
+                    <li>A list of charging stations near your zip code will be listed</li>
+                    <li>Pins will be dropped to help you visualize where listed charging stations are</li>
+                    <li>The forecast for your entered zip code will also be displayed. </li>
+                    <li>Enjoy your trip!</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- This is the alert modal-->
+    <div id="pop-up">
+        <p id="alert-message"></p>
+        <button id="close-btn">Okay</button>
+    </div>
+
+    <script src="./assets/script.js"></script>
+
+    <footer>
+        &copy;<a href="about-us.html">2022 by The PowerBuddies</a>
+    </footer>
+</body>
