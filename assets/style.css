@@ -76,12 +76,12 @@
 }
 
 .pwr-location iframe {
-    min-height: 450px;
-    width: 100%;
-    height: 100%;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 40px;
+  min-height: 450px;
+  width: 100%;
+  height: 100%;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 #location-title {
@@ -153,10 +153,9 @@
 }
 
 .weather-icon {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .weather-alert p strong {
@@ -217,7 +216,7 @@ footer {
   margin-bottom: auto;
 }
 
-/* nav {
+nav {
   margin-top: auto;
   margin-bottom: auto;
   color: white;
@@ -225,10 +224,9 @@ footer {
   padding: 15px 0;
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
-  /* position: flex;
-  margin-left: auto; */
+  position: flex;
+  margin-left: auto;
   margin-right: 2%;
- 
 }
 
 header nav ul {
@@ -237,7 +235,7 @@ header nav ul {
   flex-wrap: wrap;
   align-items: center;
   list-style: none;
-} */
+}
 
 header nav ul a {
   margin: 0 30px;
@@ -245,23 +243,80 @@ header nav ul a {
 }
 
 #howTo {
-    background-color: var(--teritary);
-    text-align: center;
-    padding-bottom: 50px;
+  background-color: var(--teritary);
+  text-align: center;
+  padding-bottom: 50px;
 }
 
 #howTo h2 {
-    color: black;
-    font-size: 25px;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: bold;
+  color: black;
+  font-size: 25px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
 }
 
 #how-to-list {
-    background-color: var(--secondary);
-    margin: 0 20%;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: auto;
-    padding-right: auto;
+  background-color: var(--secondary);
+  margin: 0 20%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.about-us-hero {
+  background-image: url("top view cropped2.png");
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: 100vh;
+}
+
+.team-members {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 29% 29% 29%;
+  gap: 2em;
+}
+
+.team-members a {
+  display: flex;
+  justify-content: center;
+}
+
+.team-members div {
+  background: rgb(180,180,180,0.7);
+}
+
+/* .team-members div {
+  opacity: .5;
+} */
+
+.team-members img {
+  width: 20%;
+  height: auto;
+  margin: 4% 0;
+}
+
+.team-members h2 {
+  color: black;
+  font-size: 50px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  margin: 4% 0;
+}
+
+#Rafael {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
