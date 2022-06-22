@@ -47,7 +47,7 @@ var zipOrpostal = function () {
                             // get location data
                             var mapCoordinates = {
                                 lat: data['fuel_stations'][i]['latitude'],
-                                lon: data['fuel_stations'][i]['latitude'],
+                                lon: data['fuel_stations'][i]['longitude'],
                             };
                             //create an array of coordinates for the map
                             mapArray.push(mapCoordinates);
@@ -169,7 +169,7 @@ var mapDisplay = function (data) {
     
     // determine the map zoom level based on the furthest distance
     var zoomLevel = 0;
-    if (data.fuel_stations[lastIndex].distance_km < 5) {
+    if (data.fuel_stations[lastIndex].distance_km < 1) {
         zoomLevel = 15;
     } else if (data.fuel_stations[lastIndex].distance_km > 10) {
         zoomLevel = 10;
