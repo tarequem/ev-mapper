@@ -67,7 +67,7 @@ var zipOrpostal = function () {
                             }
 
                             //fetch weather data
-                            var apiUrl = "https:api.openweathermap.org/data/2.5/weather?&units=metric&lat=" + mapCoordinates.lat + "&lon=" + mapCoordinates.lon + "&appid=220ff34db8df0fb665355972020ec55c";
+                            var apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&lat=" + mapCoordinates.lat + "&lon=" + mapCoordinates.lon + "&appid=220ff34db8df0fb665355972020ec55c";
 
                             //variables for weather
                             var tempEl = document.querySelector("#temp");
